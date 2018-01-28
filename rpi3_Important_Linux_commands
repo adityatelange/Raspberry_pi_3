@@ -1,0 +1,62 @@
+sudo su
+
+sudo !!
+
+
+clear {clear the console window}
+
+
+
+apt-get update {updating sources list}
+
+apt-get upgrade {upgrading the sources}
+
+
+apt-get install 
+
+
+
+
+man {manual}
+
+help {help docs}
+
+find {searches a directory and subdirectories}
+
+nano textfilename.txt
+
+ls {listing contents in dir}
+
+cp ~/some_dir/file1 ~/some_dir2/file2 {copies file1 to /somedir_2/ as filename='file2'}
+
+mkdir dirname {making new directory/folder}
+
+rmdir dirname {deleting the directory permanantly CAUTION!}
+
+ifconfig {network conguration}
+
+wget address_to_file/filename.extention {downloads the file 'filename.extention' from the web and saves it to the current directory}
+
+lsusb {list usb devices}
+
+CHMOD {to change the permissions for a file}
+
+SSH {secure shell}
+
+
+curl {to download or upload a file to/from a server}
+
+ping webaddress {check connection with 'webaddress} [ex. ping www.google.co.uk]
+
+reboot now {rebooting immediately}
+
+shutdown -h now {shutdown immediately}
+
+
+
+
+raspi-config {Raspberry Pi configuration tool} [https://www.raspberrypi.org/documentation/configuration/raspi-config.md]
+
+apt-get install tightvncserver {installing vnc}
+
+tightvncserver {starting vnc}
