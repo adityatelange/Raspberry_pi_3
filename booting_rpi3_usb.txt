@@ -1,0 +1,9 @@
+In cmdline.txt (changed the following in the boot partition from both, SD-card and USB stick.) {
+    root=/dev/[sdcard] 
+      to
+    root=/dev/[usbstick]
+}
+
+In config.txt (add the following) {
+  program_usb_boot_mode=1
+}
