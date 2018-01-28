@@ -54,6 +54,7 @@ shutdown -h now {shutdown immediately}
 
 
 
+sudo apt-get install rpi-update {get the latest firmware for your Raspberry Pi}
 
 raspi-config {Raspberry Pi configuration tool} [https://www.raspberrypi.org/documentation/configuration/raspi-config.md]
 
