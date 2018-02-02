@@ -15,11 +15,14 @@ sudo apt-get install python3-mysqldb
 
 sudo mysql -u root -p
 GRANT ALL PRIVILEGES ON mydb.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+##enter username as 'whateveryouwant' password as 'whaterverpassword'##
 
 sudo apt-get install phpmyadmin
 
 sudo nano /etc/apache2/apache2.conf
-	the bottom of this file enter the following line:
-	Include /etc/phpmyadmin/apache.conf
+
+
+##Enter the following at the bottom of this file 'apache2.conf':
+##	Include /etc/phpmyadmin/apache.conf
 	
 sudo /etc/init.d/apache2 restart
