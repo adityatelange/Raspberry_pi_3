@@ -26,3 +26,7 @@ sudo nano /etc/apache2/apache2.conf
 ##	Include /etc/phpmyadmin/apache.conf
 	
 sudo /etc/init.d/apache2 restart
+
+
+### for securing server ###
+apt-get install fail2ban
