@@ -1,0 +1,9 @@
+SSL Proxy Configuration
+Install Apache2
+
+sudo apt-get install apache2
+Enable Apache2 Modules for Proxying & SSL
+
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod ssl
