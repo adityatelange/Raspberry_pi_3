@@ -1,15 +1,22 @@
 SSL Proxy Configuration
 
+###  STEPS ###
+  # sudo mkdir /etc/apache2/ssl
+  # sudo openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key
+  
+  # Enable Apache2 Modules for Proxying & SSL
+    # sudo a2enmod proxy
+    # sudo a2enmod proxy_http
+    # sudo a2enmod ssl
 
-### Install Apache2 ###
+  # sudo ln -s /etc/apache2/sites-available/default-ssl /etc/apache2/sites-enabled/000-default-ssl
+  # sudo ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/000-default-ssl.conf
+  # sudo nano /etc/apache2/sites-enabled/000-default-ssl.conf
+  
+  # Change the two lines relative to SSLCertificate as follow (/etc/apache2/sites-enabled/000-default-ssl) 
 
-  sudo apt-get install apache2
+      SSLCertificateFile    /etc/apache2/ssl/server.crt
+      SSLCertificateKeyFile /etc/apache2/ssl/server.key
  
-### Enable Apache2 Modules for Proxying & SSL ###
-
-  sudo a2enmod proxy
-  sudo a2enmod proxy_http
-  sudo a2enmod ssl
-
 ### Restart Apache ###
   sudo systemctl restart apache2
