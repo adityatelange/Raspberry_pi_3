@@ -1,0 +1,20 @@
+#  add the Webmin repository to your sources.list file.
+sudo nano /etc/apt/sources.list
+
+# add following lines at the end of file (goto end of file press ctrl-v)
+  deb http://download.webmin.com/download/repository sarge contrib
+  deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+
+# add the Webmin GPG key to apt
+wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+
+# update the sources
+sudo apt-get update
+
+# install  webmin
+sudo apt-get install webmin -y
+
+# Webmin is now running on:
+https://rpi.local:10000
+
+# Login to webmin using username and password
