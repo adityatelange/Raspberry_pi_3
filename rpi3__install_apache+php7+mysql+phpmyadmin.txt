@@ -8,7 +8,6 @@ apt-get install -t stretch -y php7.0 php7.0-fpm php7.0-cli php7.0-opcache php7.0
 
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
-sudo mysql -u root -p
 
 sudo apt-get install python-mysqldb
 sudo apt-get install python3-mysqldb
