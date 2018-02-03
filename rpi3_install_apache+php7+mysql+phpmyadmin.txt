@@ -10,8 +10,7 @@ sudo apt-get install -y php7.0-fpm php7.0-curl php7.0-gd php7.0-cli php7.0-mcryp
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 
-sudo apt-get install python-mysqldb
-sudo apt-get install python3-mysqldb
+sudo apt-get install -y python-mysqldb python3-mysqldb 
 
 sudo mysql -u root -p
 GRANT ALL PRIVILEGES ON mydb.* TO 'username'@'localhost' IDENTIFIED BY 'password';
