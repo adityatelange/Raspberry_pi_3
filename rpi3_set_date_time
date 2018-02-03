@@ -1,3 +1,5 @@
+### UPDATING DATE AND TIME ###
+
 sudo apt-get install ntp
 
 try this:
@@ -8,3 +10,7 @@ If not with
   sudo /etc/init.d/ntp stop
   sudo ntpd -q-g
   sudo /etc/init.d/ntp start
+
+### SET DATE MANUALLY ###
+
+sudo date -s "Fri Feb 2 20:25:00 IST 2018"
