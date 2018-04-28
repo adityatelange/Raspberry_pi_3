@@ -1,0 +1,44 @@
+# Pi-Hole
+https://pi-hole.net/
+
+curl -sSL https://install.pi-hole.net | bash
+
+# Add SpeedTest to Pi-Hole
+
+sudo apt install python-pip
+sudo pip install speedtest-cli
+sudo apt install sqlite3
+
+#Configure correct timezone for graph *Need for graph to work correctly
+sudo dpkg-reconfigure tzdata
+#select your timezone
+
+for php 5.x:
+  sudo apt install php5-sqlite
+for php7.x:
+  sudo apt install php7.0-sqlite
+  
+sudo reboot
+
+# try if everything is working:
+  speedtest-cli -h
+  
+cd /var/www/html/
+sudo su
+cd /var/www/html/
+sudo su
+
+### Update this now co-exist with current pihole admin
+cd admin
+git remote add mod https://github.com/arevindh/AdminLTE
+git pull mod master
+#Create new DB in /etc/pihole/
+cp scripts/pi-hole/speedtest/speedtest.db /etc/pihole/
+
+
+cd /opt/pihole/
+mv webpage.sh webpage.sh.org
+wget https://github.com/arevindh/pi-hole/raw/master/advanced/Scripts/webpage.sh
+
+# Go to your pihole admin page
+http://pi.hole/admin
