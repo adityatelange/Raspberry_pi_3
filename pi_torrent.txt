@@ -38,7 +38,7 @@ sudo systemctl daemon-reload
 
 
 sudo mkdir -p /home/pi/.config/transmission-daemon/
-sudo ln -s /etc/transmission-daemon/settings.json /home/pip/.config/transmission-daemon/
+sudo ln -s /etc/transmission-daemon/settings.json /home/pi/.config/transmission-daemon/
 sudo chown -R pi:pi /home/pi/.config/transmission-daemon/
 
 sudo service transmission-daemon start
