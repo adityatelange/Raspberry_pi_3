@@ -1,0 +1,46 @@
+sudo apt-get install transmission-daemon
+
+// differs from user to user
+sudo mkdir -p /media/NASHDD1/torrent-inprogress
+sudo mkdir -p /media/NASHDD1/torrent-complete
+
+
+sudo nano /etc/transmission-daemon/settings.json {
+	## edit 
+	"incomplete-dir": "/media/NASHDD1/torrent-inprogress",
+	"incomplete-dir-enabled": true,
+	"download-dir": "/media/NASHDD1/torrent_complete",
+	"rpc-password": "Your_Password",
+	"rpc-username": "Your_Username",
+	"rpc-whitelist": "192.168.*.*",
+}
+
+sudo service transmission-daemon reload
+
+sudo service transmission-daemon stop
+
+sudo nano /etc/init.d/transmission-daemon {
+	## edit 
+	USER=pi
+}
+
+
+sudo chown -R pi:pi /etc/transmission-daemon
+sudo chown -R pi:pi /etc/init.d/transmission-daemon
+sudo chown -R pi:pi /var/lib/transmission-daemon
+
+sudo nano /etc/systemd/system/multi-user.target.wants/transmission-daemon.service {
+	## edit 
+	user=pi
+}
+
+sudo systemctl daemon-reload
+
+
+sudo mkdir -p /home/pi/.config/transmission-daemon/
+sudo ln -s /etc/transmission-daemon/settings.json /home/pip/.config/transmission-daemon/
+sudo chown -R pi:pi /home/pi/.config/transmission-daemon/
+
+sudo service transmission-daemon start
+
+http://your_pi_ip:9091
