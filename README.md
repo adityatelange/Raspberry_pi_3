@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.io/AdityaTelange/Raspberry_pi_3.svg)](http://hits.dwyl.io/AdityaTelange/Raspberry_pi_3)
+
 # Raspberry_pi_3
 
 <a href='booting_rpi3_usb'>Raspberry pi USB drive boot</a>
